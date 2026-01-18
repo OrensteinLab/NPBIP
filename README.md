@@ -66,6 +66,8 @@ Every script can be executed independently for custom workflows:
 
 - `train_NucProNet.py`: **Training Script** for retraining NucProNet on custom datasets.
 
+- `interpretability.py`: Identifies critical binding motifs by employing the Occlusion algorithm to calculate importance scores for each nucleotide position.
+
 #### 🔍 SimBind Module (`src/SimBind/`)
 - `SimBind.py`: Manages the similarity-based pipeline.
 
@@ -83,12 +85,12 @@ Every script can be executed independently for custom workflows:
 Results are structured to provide both the "bottom line" and the biological reasoning behind it.
 
 #### Primary Result
-- `output/<run_id>/final_predictions.csv`: The integrated binding scores.
+- `output/<run_id>/NPBIP_predictions.csv`: The integrated binding scores.
 
 #### Biological Insights & Components
-- `identified_domains.txt`: See which functional domains were detected in your query proteins.
+- `hmmscan_results_{type}.tbl`: See which functional domains were detected in your query proteins.
 
-- `similarity_matrix.pkl`: Explore how similar your query is to the proteins in our reference database.
+- `{type}_pairwise_AA_SID_results.csv`: Explore how similar your query is to the proteins in our reference database.
 
 - `NucProNet/SimBind raw scores`: Individual scores from each component before aggregation.
 
