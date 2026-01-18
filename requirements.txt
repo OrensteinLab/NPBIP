@@ -1,0 +1,15 @@
+# Core Data Handling & Stats
+numpy
+pandas
+scipy
+
+# Machine Learning & Deep Learning
+torch
+transformers
+captum
+
+# Bioinformatics Tools
+biopython
+
+# Utilities
+tqdm
